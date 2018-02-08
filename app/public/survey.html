@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Friend Finder - Survey</title>
+	<title>Nap Finder - Survey</title>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -12,7 +12,7 @@
 	<div class="jumbotron">
 		<h1>Survey Questions</h1><br>
 		<hr>
-		<form method="POST" action="/api/friends">
+		<form method="POST" action="/api/naps">
 			<h3><strong>About You</strong></h3>
 			<fieldset class="form-group">
 				<label for="name">Name (Required)</label>
@@ -25,7 +25,7 @@
 			<hr>
 			<h4><strong>Question 1</strong></h4>
 			<fieldset class="form-group">
-				<label for="question01">I love trying new things.</label>
+				<label for="question01">I have plenty of time.</label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question01" name="scores[0]">
@@ -39,7 +39,7 @@
 			</fieldset>
 			<h4><strong>Question 2</strong></h4>
 			<fieldset class="form-group">
-				<label for="question02">I get along great with my family.</label>
+				<label for="question02">I need more than just an energy boost.</label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question02" name="scores[1]">
@@ -53,7 +53,7 @@
 			</fieldset>
 			<h4><strong>Question 3</strong></h4>
 			<fieldset class="form-group">
-				<label for="question03">Scary movies are the best!</label>
+				<label for="question03">I need to memorize what I've just studied!</label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question03" name="scores[2]">
@@ -67,7 +67,7 @@
 			</fieldset>
 			<h4><strong>Question 4</strong></h4>
 			<fieldset class="form-group">
-				<label for="question04">I love telling stories to anyone who will listen.</label>
+				<label for="question04">I am about to need massive amoundts of concentration.</label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question04" name="scores[3]">
@@ -81,7 +81,7 @@
 			</fieldset>
 			<h4><strong>Question 5</strong></h4>
 			<fieldset class="form-group">
-				<label for="question05">My religion is very important to me.</label>
+				<label for="question05">I just had a stimulant (coffee).</label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question05" name="scores[4]">
@@ -95,7 +95,7 @@
 			</fieldset>
 			<h4><strong>Question 6</strong></h4>
 			<fieldset class="form-group">
-				<label for="question06">Books are amazing, I love to read.</label>
+				<label for="question06">I got plent of sleep LAST night.</label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question06" name="scores[5]">
@@ -109,7 +109,7 @@
 			</fieldset>
 			<h4><strong>Question 7</strong></h4>
 			<fieldset class="form-group">
-				<label for="question07">Cats are the best!</label>
+				<label for="question07">I don't mind waking up groggy</label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question07" name="scores[6]">
@@ -123,7 +123,7 @@
 			</fieldset>
 			<h4><strong>Question 8</strong></h4>
 			<fieldset class="form-group">
-				<label for="question08">Poetry is not worth my time.</label>
+				<label for="question08">I need to hit the ground running.</label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question08" name="scores[7]">
@@ -137,7 +137,7 @@
 			</fieldset>
 			<h4><strong>Question 9</strong></h4>
 			<fieldset class="form-group">
-				<label for="question09">On a sunny day, I have to go outside!</label>
+				<label for="question09">I need a deep sleep so I can dream!</label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question09" name="scores[8]">
@@ -151,7 +151,7 @@
 			</fieldset>
 			<h4><strong>Question 10</strong></h4>
 			<fieldset class="form-group">
-				<label for="question10">Dogs are man's best friend.</label>
+				<label for="question10">I need to optimize creativity.</label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question10" name="scores[9]">
@@ -163,22 +163,22 @@
 					</select>
 				</div>
 			</fieldset><br>
-			<input type="submit" class="btn btn-primary" value="Request Friend" id="submit">
+			<input type="submit" class="btn btn-primary" value="Find My Nap!" id="submit">
 		</form>
 	</div>
 	<hr>
-	<a href="/api/friends">API Friends</a> | <a href="https://github.com/coleve27/friendFinder" target="_blank">GitHub Repo</a>
+	<a href="/api/naps">API Friends</a> | <a href="https://github.com/coleve27/friendFinder" target="_blank">GitHub Repo</a>
 </div>
-<div id="bestFriendModal" class="modal fade" role="dialog">
+<div id="bestNapModal" class="modal fade" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">X</button>
-				<h2 class="modal-title">Best Match</h2>
+				<h2 class="modal-title">Best Nap!</h2>
 			</div>
 			<div class="modal-body">
-				<h2 id="bestFriendName"></h2>
-				<!-- <img id="bestFriendImg" src="https://scontent-dfw1-1.xx.fbcdn.net/t31.0-8/13116244_10107568960519320_7024834722285826624_o.jpg" onError="this.src='https://answers.atlassian.com/images/icons/profilepics/default.png'" width=500px alt="Best Friend"> -->
+				<h2 id="bestNapName"></h2>
+				<img id="bestNapImg" src="https://cdn.pixabay.com/photo/2017/12/01/10/11/cat-2990587_960_720.jpg" onError="this.src='https://cdn.pixabay.com/photo/2017/12/01/10/11/cat-2990587_960_720.jpg'" width=500px alt="Best Nap">
 			</div>
 		</div>
 	</div>
@@ -195,10 +195,10 @@
       $('#question07').val().trim(), $('#question08').val().trim(), $('#question09').val().trim(), $('#question10').val().trim()]
 		}
 		var currentURL = window.location.origin;
-		$.post(currentURL + '/api/friends', userInput, function(data) {
-			$("#bestFriendName").text(data.name);
-			$("#bestFriendImg").attr("src", data.photo);
-			$("#bestFriendModal").modal("show");
+		$.post(currentURL + '/api/naps', userInput, function(data) {
+			$("#bestNapName").text(data.name);
+			$("#bestNapImg").attr("src", data.photo);
+			$("#bestNapModal").modal("show");
 		});
 		return false;
 	});
