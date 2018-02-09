@@ -9,15 +9,15 @@ var newNap = [ {
 	"scores" : [5,5,2,3,1,5,2,1,3,5]
 }, {
 	"name" : "35min Nap",
-	"photo" : "https://cdn.pixabay.com/photo/2016/11/15/15/43/cat-1826614_1280.jpg",
+	"photo" : "https://static.boredpanda.com/blog/wp-content/uploads/2014/01/funny-sleeping-cats-11.jpg",
 	"scores" : [1,5,1,1,1,1,1,1,5,5]
 }, {
 	"name" : "60min Nap",
-	"photo" : "https://cdn.pixabay.com/photo/2016/07/29/09/37/cat-1551783_1280.jpg",
+	"photo" : "https://static.boredpanda.com/blog/wp-content/uploads/2014/01/funny-sleeping-cats-18.jpg",
 	"scores" : [5,3,2,3,2,5,1,3,3,4]
 }, {
 	"name" : "90min Nap",
-	"photo" : "https://cdn.pixabay.com/photo/2017/12/01/10/11/cat-2990587_960_720.jpg",
+	"photo" : "https://static.boredpanda.com/blog/wp-content/uploads/2014/01/funny-sleeping-cats-12.jpg",
 	"scores" : [5,3,2,3,2,5,1,3,3,4]
 }];
 
